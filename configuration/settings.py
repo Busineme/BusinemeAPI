@@ -3,10 +3,10 @@ Django settings for BusinemeAPI project.
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import os
-from configuration import apps, databases, security, statics
-
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+import apps
+import databases
+import security
+import statics
 
 # Security configurations
 SECRET_KEY = security.SECRET_KEY
@@ -26,7 +26,6 @@ WSGI_APPLICATION = 'BusinemeAPI.wsgi.application'
 
 # Database configuration
 DATABASES = databases.DATABASES
-
 
 # Internationalization
 LANGUAGE_CODE = 'en-us'

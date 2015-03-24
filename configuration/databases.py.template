@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
-from django.conf.settings import BASE_DIR
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
 # Database configuration
