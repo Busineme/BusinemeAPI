@@ -1,83 +1,42 @@
 """
 Django settings for BusinemeAPI project.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/1.7/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from configuration import apps, databases, security, statics
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '9=spb-!d8#t4sq@d+i22k%23u+_87tf#gxg!1n$gnh($xv-c^8'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-TEMPLATE_DEBUG = True
-
-ALLOWED_HOSTS = []
-
+# Security configurations
+SECRET_KEY = security.SECRET_KEY
+DEBUG = security.DEBUG
+TEMPLATE_DEBUG = security.TEMPLATE_DEBUG
+ALLOWED_HOSTS = security.ALLOWED_HOSTS
 
 # Application definition
+INSTALLED_APPS = apps.INSTALLED_APPS
+MIDDLEWARE_CLASSES = apps.MIDDLEWARE_CLASSES
 
-INSTALLED_APPS = (
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-)
-
-MIDDLEWARE_CLASSES = (
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-)
-
+# Default URLs
 ROOT_URLCONF = 'BusinemeAPI.urls'
 
+# WSGI
 WSGI_APPLICATION = 'BusinemeAPI.wsgi.application'
 
+# Database configuration
+DATABASES = databases.DATABASES
 
-# Database
-# https://docs.djangoproject.com/en/1.7/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 # Internationalization
-# https://docs.djangoproject.com/en/1.7/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.7/howto/static-files/
-
-STATIC_URL = '/static/'
+# Static files
+STATIC_URL = statics.STATIC_URL
+STATIC_ROOT = statics.STATIC_ROOT
+STATICFILES_DIRS = statics.STATICFILES_DIRS
+TEMPLATE_DIRS = statics.TEMPLATE_DIRS
