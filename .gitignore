@@ -55,6 +55,7 @@ docs/_build/
 # Configuration Files
 configuration/*
 !configuration/*.template
+!configuration/settings.py
 
 # SQLite
 *.sqlite*
