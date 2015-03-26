@@ -3,10 +3,7 @@ Django settings for BusinemeAPI project.
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import apps
-import databases
-import security
-import statics
+from configuration import apps, databases, security, statics
 
 # Security configurations
 SECRET_KEY = security.SECRET_KEY
