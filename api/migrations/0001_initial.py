@@ -37,7 +37,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='busline',
             name='company',
-            field=models.ForeignKey(to='app.Company'),
+            field=models.ForeignKey(to='api.Company', null=True),
             preserve_default=True,
         ),
     ]
