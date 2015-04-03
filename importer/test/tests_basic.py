@@ -47,3 +47,13 @@ class API_Test(Basic_Tests):
         self.my_type = '[API]'
         stderr.write(self.__str__())
         self.shortDescription()
+
+
+class Parser_Test(Basic_Tests):
+
+    """Basic test class to Parser"""
+
+    def setUp(self):
+        self.my_type = '[Parser]'
+        stderr.write(self.__str__())
+        self.shortDescription()
