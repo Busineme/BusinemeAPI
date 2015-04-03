@@ -9,11 +9,12 @@ coverage erase
 echo "API Tests"
 coverage run --source='api' manage.py test
 coverage report -m
+coverage html -d ../coverage/API
 echo ""
 echo "APP Tests"
 coverage run --source='app' manage.py test
 coverage report -m
-coverage html -d ../../coverage
+coverage html -d ../coverage/APP
 echo -n "Killing everything -------------------------------------- "
 killall -9 coverage python test_coverage.sh -q
 echo "Killed"
