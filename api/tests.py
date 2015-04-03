@@ -3,6 +3,7 @@
 from importer.test.tests_basic import API_Test
 import models
 import migrations
+import views
 
 
 class API_Model(API_Test):
@@ -24,3 +25,12 @@ class API_Migration(API_Test):
     def test_migration_instance(self):
 
         self.assertIsNotNone(migrations)
+
+
+class API_Views(API_Test):
+
+    """docstring for API_Views"""
+
+    def test_views_instance(self):
+
+        self.assertIsNotNone(views)
