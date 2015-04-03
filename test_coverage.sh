@@ -7,12 +7,12 @@ python manage.py runserver 8000 &> /dev/null  &
 echo "Done"
 coverage erase
 echo "API Tests"
-coverage run --source='api' manage.py test
+coverage run --source='api' manage.py test api
 coverage report -m
 coverage html -d ../coverage/API
 echo ""
 echo "APP Tests"
-coverage run --source='app' manage.py test
+coverage run --source='app' manage.py test app
 coverage report -m
 coverage html -d ../coverage/APP
 echo -n "Killing everything -------------------------------------- "
