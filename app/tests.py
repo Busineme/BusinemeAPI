@@ -21,3 +21,9 @@ class APP_Parser(Parser_Test):
         self.assertRaises(IOError, parser.read_file, 'away')
         file = 'importer/data/bus_lines.csv'
         self.assertIsNotNone(parser.read_file(file))
+
+    def test_parser_import_bus_lines(self):
+
+        parser = Parser()
+        print ''
+        self.assertIsNone(parser.import_bus_lines())
