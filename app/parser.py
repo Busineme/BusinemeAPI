@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import csv
-from app.models import BusLine
+from api.models import BusLine
+
 
 class Parser():
 
