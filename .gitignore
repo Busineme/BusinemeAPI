@@ -57,6 +57,7 @@ configuration/*
 !configuration/*.template
 !configuration/settings.py
 !configuration/__init__.py
+!configuration/apps.py
 
 # SQLite
 *.sqlite*

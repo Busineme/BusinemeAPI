@@ -29,7 +29,6 @@ PLUGINS_APPS = (
 # Busine.me application apps
 BUSINEME_APPS = (
     'api',
-    'app',
 )
 
 INSTALLED_APPS = DJANGO_APPS + PLUGINS_APPS + BUSINEME_APPS
