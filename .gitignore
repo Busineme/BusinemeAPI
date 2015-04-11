@@ -65,3 +65,6 @@ configuration/*
 # Others
 .sass-cache/
 .sonar/
+
+# Migrations
+**/migrations/*.py

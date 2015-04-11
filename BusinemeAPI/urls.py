@@ -1,11 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from tastypie.api import Api
-from api.rest_api import BusLineResource, CompanyResource
-
-v1_api = Api(api_name='v1')
-v1_api.register(CompanyResource())
-v1_api.register(BusLineResource())
+from api.urls import v1_api
 
 urlpatterns = patterns(
     '',
