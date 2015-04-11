@@ -4,6 +4,7 @@ from importer.test.tests_basic import API_Test
 import models
 import migrations
 import views
+import rest_api
 
 
 class API_Model(API_Test):
@@ -37,3 +38,15 @@ class API_Views(API_Test):
     def test_views_instance(self):
 
         self.assertIsNotNone(views)
+
+
+class API_Rest(API_Test):
+
+    """docstring for Rest_API"""
+
+    def test_resource_api_instance(self):
+        CompanyResource = rest_api.CompanyResource()
+        BusLineResource = rest_api.BusLineResource()
+
+        self.assertIsNotNone(CompanyResource)
+        self.assertIsNotNone(BusLineResource)
