@@ -16,6 +16,8 @@ class API_Model(API_Test):
 
         self.assertIsNotNone(busline)
         self.assertIsNotNone(company)
+        self.assertIsNotNone(company.__unicode__())
+        self.assertIsNotNone(busline.__unicode__())
 
 
 class API_Migration(API_Test):
@@ -25,6 +27,7 @@ class API_Migration(API_Test):
     def test_migration_instance(self):
 
         self.assertIsNotNone(migrations)
+        print migrations.__dict__['__package__']
 
 
 class API_Views(API_Test):
