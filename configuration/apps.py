@@ -23,12 +23,13 @@ DJANGO_APPS = (
 
 # Django plugins apps
 PLUGINS_APPS = (
-    'tastypie',        
+    'tastypie',
 )
 
 # Busine.me application apps
 BUSINEME_APPS = (
     'api',
+    'importer',
 )
 
 INSTALLED_APPS = DJANGO_APPS + PLUGINS_APPS + BUSINEME_APPS
