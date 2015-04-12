@@ -8,9 +8,10 @@ class TestModels(APITest):
 
     """docstring for API_Model"""
 
-    def test_model_instance(self):
+    def test_model_package(self):
         self.assertIsNotNone(models)
-        terminal = models.Terminal()
+
+    def test_model_instance(self):
         company = models.Company(name='Marechal')
         company.save()
 
@@ -26,4 +27,7 @@ class TestModels(APITest):
         self.assertIsNotNone(busline.__unicode__())
         self.assertIsNotNone(company)
         self.assertIsNotNone(company.__unicode__())
+
+    def test_model_terminal(self):
+        terminal = models.Terminal()
         self.assertIsNotNone(terminal)
