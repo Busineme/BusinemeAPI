@@ -37,22 +37,20 @@ class BusinemeTests(SimpleTestCase):
     def shortDescription(self):
         return "Teste da classe %s" % self.__class__.__name__
 
+    def setUp(self):
+        stderr.write(self.__str__())
+        self.shortDescription()
+
 
 class APITest(BusinemeTests):
 
     """Basic test class to API"""
 
-    def setUp(self):
-        self.my_type = '[API]'
-        stderr.write(self.__str__())
-        self.shortDescription()
+    my_type = '[API]'
 
 
 class ParserTest(BusinemeTests):
 
     """Basic test class to Parser"""
 
-    def setUp(self):
-        self.my_type = '[Parser]'
-        stderr.write(self.__str__())
-        self.shortDescription()
+    my_type = '[Parser]'
