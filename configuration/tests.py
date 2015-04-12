@@ -3,13 +3,22 @@
 from django.test import SimpleTestCase
 from sys import stderr
 
-
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
 NOSE_ARGS = [
     '--with-coverage',
     '--cover-package=api,importer',
     '--cover-erase',
+    '--exe',
+    '--with-doctest',
+    '--all-modules',
+    '--logging-clear-handlers',
+    '-d',  # Add detail to error output
+    # '--cover-html',
+    # '-s',  # print stdout
+    '--cover-tests',  # test tests
+    '--nologcapture',
+    '--verbosity=2',
 ]
 
 
@@ -29,10 +38,11 @@ class BusinemeTests(SimpleTestCase):
         self.getName()
         out = '\r%s %s test ' % (self.my_type, self.name)
         out = out.ljust(70, '-')
-        return out
+        return out + ' '
 
     def tearDown(self):
-        stderr.write(' Done\n')
+        # stderr.write(' Done\n')
+        pass
 
     def shortDescription(self):
         return "Teste da classe %s" % self.__class__.__name__
