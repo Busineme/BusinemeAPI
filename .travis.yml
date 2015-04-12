@@ -16,11 +16,11 @@ before_script:
  - python manage.py makemigrations
  - python manage.py migrate
 
-
 script:
  - coverage run manage.py test api
- - COVERALLS_REPO_TOKEN=e1doz7mODBC65bww3MIH3xJfMhLDDROgT coveralls
 
+after_success:
+ - coveralls
 
 notifications:
   slack: busine-me:vHgBvWEGnKVRabVoYSTzd1tq
