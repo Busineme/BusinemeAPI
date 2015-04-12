@@ -4,6 +4,7 @@ from django.db import models
 
 
 class BusLine(models.Model):
+
     """docstring for BusLine"""
 
     line_number = models.CharField(max_length=5)
@@ -19,6 +20,7 @@ class BusLine(models.Model):
 
 
 class Company(models.Model):
+
     """docstring for Company"""
 
     name = models.CharField(max_length=255)
@@ -28,6 +30,7 @@ class Company(models.Model):
 
 
 class Terminal(models.Model):
+
     """docstring for Terminal"""
 
     description = models.CharField(max_length=255)

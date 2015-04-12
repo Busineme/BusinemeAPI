@@ -1,11 +1,14 @@
 language: python
 
+env:
+  - DJANGO=1.7
+
 python:
  - "2.7"
 
 install:
  - sudo apt-get install python2.7 python-pip
- - sudo pip install -r requirements.txt
+ - pip install -r requirements.txt
  - cp configuration/databases.py.template configuration/databases.py
  - cp configuration/security.py.template configuration/security.py
  - cp configuration/statics.py.template configuration/statics.py
