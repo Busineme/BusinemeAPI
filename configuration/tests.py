@@ -10,7 +10,6 @@ NOSE_ARGS = [
     '--with-coverage',
     '--cover-package=api,importer',
     '--cover-erase',
-    '--cover-min-percentage=80',
 ]
 
 
