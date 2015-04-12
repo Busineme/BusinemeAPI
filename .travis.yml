@@ -6,6 +6,10 @@ python:
 install:
  - sudo apt-get install python2.7 python-pip
  - sudo pip install -r requirements.txt
+ - cp configuration/databases.py.template configuration/databases.py
+ - cp configuration/security.py.template configuration/security.py
+ - cp configuration/statics.py.template configuration/statics.py
+
 
 script:
  - python manage.py test api
