@@ -58,6 +58,7 @@ configuration/*
 !configuration/settings.py
 !configuration/__init__.py
 !configuration/apps.py
+!configuration/tests.py
 
 # SQLite
 *.sqlite*
