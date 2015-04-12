@@ -19,9 +19,8 @@ before_script:
 
 script:
  - coverage run manage.py test api
-
-after_success:
  - COVERALLS_REPO_TOKEN=e1doz7mODBC65bww3MIH3xJfMhLDDROgT coveralls
+
 
 notifications:
   slack: busine-me:vHgBvWEGnKVRabVoYSTzd1tq
