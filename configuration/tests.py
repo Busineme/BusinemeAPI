@@ -4,7 +4,14 @@ from django.test import SimpleTestCase
 from sys import stderr
 
 
-TEST_RUNNER = 'django_coverage.coverage_runner.CoverageRunner'
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+NOSE_ARGS = [
+    '--with-coverage',
+    '--cover-package=api,importer',
+    '--cover-erase',
+    '--cover-min-percentage=80',
+]
 
 
 class BusinemeTests(SimpleTestCase):

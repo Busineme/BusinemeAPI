@@ -39,3 +39,4 @@ TEMPLATE_DIRS = statics.TEMPLATE_DIRS
 
 # Tests configuration
 TEST_RUNNER = tests.TEST_RUNNER
+NOSE_ARGS = tests.NOSE_ARGS

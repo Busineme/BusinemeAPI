@@ -24,6 +24,7 @@ DJANGO_APPS = (
 # Django plugins apps
 PLUGINS_APPS = (
     'tastypie',
+    'django_nose',
 )
 
 # Busine.me application apps
