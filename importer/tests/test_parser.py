@@ -45,10 +45,15 @@ class TestParser(ParserTest):
     
     def test_parser_import_data(self):
         parser = Parser()
-        print ''
         self.assertIsNone(parser.import_data())
 
+    def test_parser_create_busline_terminal_relation(self):
+        parser = Parser()
+        self.assertIsNone(parser.create_busline_terminal_relation())
 
+    def test_parser_import_companies(self):
+        parser = Parser()
+        self.assertIsNone(parser.import_companies())
 
 
 
