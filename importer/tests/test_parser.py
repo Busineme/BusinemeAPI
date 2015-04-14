@@ -28,3 +28,8 @@ class TestParser(ParserTest):
         parser = Parser()
         print ''
         self.assertIsNone(parser.import_bus_lines())
+
+    def test_parser_import_terminals(self):
+        parser = Parser()
+        print ''
+        self.assertIsNone(parser.import_terminals())
