@@ -12,5 +12,6 @@ In order to make it work properly, run the following commands to install the dep
 ```shell
 # apt install python2.7 python-pip
 # pip install -r requirements.txt
+# python manage.py import_data
 ```
 
