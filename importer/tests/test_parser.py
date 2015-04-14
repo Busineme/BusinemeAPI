@@ -42,7 +42,11 @@ class TestParser(ParserTest):
         for row in csv_file:
             self.assertIsNone(parser.import_terminal(row))
             break
-        
+    
+    def test_parser_import_data(self):
+        parser = Parser()
+        print ''
+        self.assertIsNone(parser.import_data())
 
 
 
