@@ -7,7 +7,7 @@ class BusLine(models.Model):
 
     """docstring for BusLine"""
 
-    line_number = models.CharField(max_length=5)
+    line_number = models.CharField(max_length=5, unique=True)
     description = models.CharField(max_length=255)
     via = models.CharField(max_length=255)
     route_size = models.FloatField()  # unit: kilometers
@@ -34,4 +34,4 @@ class Terminal(models.Model):
     """docstring for Terminal"""
 
     description = models.CharField(max_length=255)
-    address = models.CharField(max_length=255, null=True)
+    address = models.CharField(max_length=255, null=True,)
