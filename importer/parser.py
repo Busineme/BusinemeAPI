@@ -70,14 +70,20 @@ class Parser(object):
         csv_file = self.read_file('importer/data/terminals.csv')
 
         print 'Importing Terminals...'
+        
         for row in csv_file:
-            try:
-                Terminal.objects.get(description=row[0])
-                print 'Terminal', row[0], 'already registered'
-            except ObjectDoesNotExist:
-                terminal = Terminal()
-                terminal.description = row[0]
-                terminal.save()
+            self.import_terminal(row)
+
+
+    def import_terminal(self, row):
+        try:
+            Terminal.objects.get(description=row[0])
+            print 'Terminal', row[0], 'already registered'
+        except ObjectDoesNotExist:
+            terminal = Terminal()
+            terminal.description = row[0]
+            terminal.save()
+
 
     def import_companies(self):
         csv_file = self.read_file('importer/data/companies.csv')
