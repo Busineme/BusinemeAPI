@@ -29,7 +29,24 @@ class TestParser(ParserTest):
         print ''
         self.assertIsNone(parser.import_bus_lines())
 
-    def test_parser_import_terminals(self):
+    def test_parser_import_terminals_non_existing(self):
         parser = Parser()
         print ''
         self.assertIsNone(parser.import_terminals())
+
+    def test_parser_import_terminal_existing(self):
+        parser = Parser()
+        parser.import_terminals()
+        csv_file = parser.read_file('importer/data/terminals.csv')
+        
+        for row in csv_file:
+            self.assertIsNone(parser.import_terminal(row))
+            break
+        
+
+
+
+
+
+
+
