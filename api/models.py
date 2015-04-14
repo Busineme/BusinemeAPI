@@ -34,4 +34,4 @@ class Terminal(models.Model):
     """docstring for Terminal"""
 
     description = models.CharField(max_length=255)
-    address = models.CharField(max_length=255)
+    address = models.CharField(max_length=255, null=True)
