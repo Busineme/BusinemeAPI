@@ -22,8 +22,8 @@ class TerminalResource(ModelResource):
 class BusLineResource(ModelResource):
     company = fields.ForeignKey(CompanyResource,
                                 'company', null=True, full=True)
-    terminals = fields.ToManyField(TerminalResource,
-                                   'terminal', null=True, full=True)
+    terminals = fields.ToManyField(TerminalResource, full=True,
+                                   attribute=lambda bundle: Terminal.objects.filter(busline=bundle.obj))
 
     class Meta:
         queryset = BusLine.objects.all()
