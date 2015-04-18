@@ -56,6 +56,7 @@ class Parser(object):
                     bus_line.terminals.add(terminal1)
                     bus_line.save()
             except ObjectDoesNotExist:
+                print 'Error for BusLine ', row[0]
                 print 'Terminal', row[5], 'does not exist.'
 
             try:
@@ -64,6 +65,7 @@ class Parser(object):
                     bus_line.terminals.add(terminal2)
                     bus_line.save()
             except ObjectDoesNotExist:
+                print 'Error for BusLine ', row[0]
                 print 'Terminal', row[6], 'does not exist.'
 
     def import_terminals(self):
