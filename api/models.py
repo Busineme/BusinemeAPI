@@ -35,3 +35,6 @@ class Terminal(models.Model):
 
     description = models.CharField(max_length=255)
     address = models.CharField(max_length=255, null=True,)
+
+    def __unicode__(self):
+        return self.description

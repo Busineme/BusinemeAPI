@@ -11,8 +11,6 @@ class CompanyResource(ModelResource):
 
 
 class TerminalResource(ModelResource):
-    buslines = fields.ToManyField('api.resources.BusLineResource',
-                                  'busline', null=True, full=True)
 
     class Meta:
         queryset = Terminal.objects.all()
