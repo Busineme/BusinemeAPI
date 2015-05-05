@@ -9,7 +9,6 @@ class TestParser(ParserTest):
     """docstring for API_Views"""
 
     def test_parser(self):
-
         self.assertTrue(True)
 
     def test_parser_instance(self):

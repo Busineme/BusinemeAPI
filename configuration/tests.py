@@ -64,3 +64,10 @@ class ParserTest(BusinemeTests):
     """Basic test class to Parser"""
 
     my_type = '[Parser]'
+
+class ManagementTest(BusinemeTests):
+
+    """Basic test class to Parser"""
+
+    my_type = '[ManagementTest]'
+
