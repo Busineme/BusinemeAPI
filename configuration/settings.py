@@ -40,3 +40,7 @@ TEMPLATE_DIRS = statics.TEMPLATE_DIRS
 # Tests configuration
 TEST_RUNNER = tests.TEST_RUNNER
 NOSE_ARGS = tests.NOSE_ARGS
+
+# Tastypie Settings
+TASTYPIE_ALLOW_MISSING_SLASH = True
+APPEND_SLASH = False
