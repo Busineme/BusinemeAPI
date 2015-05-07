@@ -22,12 +22,15 @@ DJANGO_APPS = (
     'django.contrib.staticfiles')
 
 # Django plugins apps
-PLUGINS_APPS = ()
+PLUGINS_APPS = (
+    'tastypie',
+    'django_nose',
+)
 
 # Busine.me application apps
 BUSINEME_APPS = (
     'api',
-    'app',
+    'importer',
 )
 
 INSTALLED_APPS = DJANGO_APPS + PLUGINS_APPS + BUSINEME_APPS

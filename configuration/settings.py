@@ -3,7 +3,7 @@ Django settings for BusinemeAPI project.
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-from configuration import apps, databases, security, statics
+from configuration import apps, databases, security, statics, tests
 
 # Security configurations
 SECRET_KEY = security.SECRET_KEY
@@ -36,3 +36,11 @@ STATIC_URL = statics.STATIC_URL
 STATIC_ROOT = statics.STATIC_ROOT
 STATICFILES_DIRS = statics.STATICFILES_DIRS
 TEMPLATE_DIRS = statics.TEMPLATE_DIRS
+
+# Tests configuration
+TEST_RUNNER = tests.TEST_RUNNER
+NOSE_ARGS = tests.NOSE_ARGS
+
+# Tastypie Settings
+TASTYPIE_ALLOW_MISSING_SLASH = True
+APPEND_SLASH = False

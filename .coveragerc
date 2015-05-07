@@ -1,0 +1,19 @@
+[run]
+source =
+    importer/
+    BusinemeAPI/
+    api/
+omit =
+    */migrations/*
+    test_*.py
+    __init__.py
+    */urls.py
+    */tests.py
+
+[report]
+precision = 2
+show_missing = True
+
+[html]
+directory = coverage_report/
+title = BusinemeAPI Test Coverage

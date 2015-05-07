@@ -5,6 +5,8 @@ __pycache__/
 # C extensions
 *.so
 
+*.DS_Store
+
 # Distribution / packaging
 .Python
 env/
@@ -27,6 +29,7 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
+coverage_report/
 htmlcov/
 .tox/
 .coverage
@@ -57,6 +60,9 @@ configuration/*
 !configuration/*.template
 !configuration/settings.py
 !configuration/__init__.py
+!configuration/apps.py
+!configuration/tests.py
+!configuration/statics.py
 
 # SQLite
 *.sqlite*
@@ -64,3 +70,8 @@ configuration/*
 # Others
 .sass-cache/
 .sonar/
+
+# Migrations
+**/migrations/*.py
+
+**/migrations/*.py.template
