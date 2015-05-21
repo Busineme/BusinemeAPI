@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/Busineme/BusinemeAPI.svg)](https://travis-ci.org/Busineme/BusinemeAPI)
 [![Coverage Status](https://coveralls.io/repos/Busineme/BusinemeAPI/badge.svg?branch=api_setup)](https://coveralls.io/r/Busineme/BusinemeAPI?branch=api_setup)
-[![Code Climate](https://codeclimate.com/repos/5529f8ade30ba030cd00103b/badges/64d341935a998d759abe/gpa.svg)](https://codeclimate.com/repos/5529f8ade30ba030cd00103b/feed)
+[![Code Climate](https://codeclimate.com/github/Busineme/BusinemeAPI/badges/gpa.svg)](https://codeclimate.com/github/Busineme/BusinemeAPI)
 
 
 
