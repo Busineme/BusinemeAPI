@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User as DjangoUser
 
 # Create your models here.
 
@@ -38,3 +39,10 @@ class Terminal(models.Model):
 
     def __unicode__(self):
         return self.description
+
+
+class User(DjangoUser):
+    pontuation = models.IntegerField(default=0)
+
+    def __unicode__(self):
+        return self.id + " - " + self.username

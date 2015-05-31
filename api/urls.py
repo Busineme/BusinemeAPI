@@ -1,9 +1,9 @@
 from tastypie.api import Api
-from api.resources import (BusLineResource, CompanyResource, TerminalResource)
-                           # BusLineTerminalResource)
+from api.resources import (BusLineResource, CompanyResource, TerminalResource,
+                           UserResource)
 
 v1_api = Api(api_name='v1')
 v1_api.register(CompanyResource())
 v1_api.register(BusLineResource())
 v1_api.register(TerminalResource())
-# v1_api.register(BusLineTerminalResource())
+v1_api.register(UserResource())
