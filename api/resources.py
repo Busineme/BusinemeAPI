@@ -1,7 +1,10 @@
-from tastypie.resources import ModelResource, ALL
+from api.exception import EmailAlreadyExistsError, UsernameAlreadyExistsError
+from django.db import IntegrityError
+from models import BusLine, Company, Terminal, User
 from tastypie import fields
 from tastypie.authorization import Authorization
-from models import BusLine, Company, Terminal, User
+from tastypie.exceptions import BadRequest
+from tastypie.resources import ModelResource, ALL
 
 
 class CompanyResource(ModelResource):
@@ -48,3 +51,19 @@ class UserResource(ModelResource):
         filtering = {
             'username': ALL
         }
+
+    def obj_create(self, bundle, **kwargs):
+        bundle.obj.save()
+        try:
+            bundle = super(UserResource, self).obj_create(bundle, **kwargs)
+            bundle.obj.set_password(bundle.data.get('password'))
+            bundle.obj.check_username()
+            print 'OIUOIUOIU' * 80
+            bundle.obj.check_email()
+            bundle.obj.save()
+        except UsernameAlreadyExistsError, error:
+            return BadRequest({'code': 601, 'message': error})
+        except EmailAlreadyExistsError, error:
+            return BadRequest({'code': 602, 'message': error})
+        except IntegrityError:
+            return BadRequest()

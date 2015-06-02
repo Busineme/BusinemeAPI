@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User as DjangoUser
+from api.exception import EmailAlreadyExistsError, UsernameAlreadyExistsError
 
 # Create your models here.
 
@@ -45,4 +46,15 @@ class User(DjangoUser):
     pontuation = models.IntegerField(default=0)
 
     def __unicode__(self):
-        return self.id + " - " + self.username
+        return str(self.id) + " - " + self.username
+
+    def check_username(self):
+        username_exists = User.objects.filter(username=self.username).count()
+        if not username_exists:
+            raise UsernameAlreadyExistsError()
+
+    def check_email(self):
+        email_exists = User.objects.filter(email=self.email).count()
+
+        if not email_exists:
+            raise EmailAlreadyExistsError()
