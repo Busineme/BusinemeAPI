@@ -29,6 +29,6 @@ class BusLineResource(ModelResource):
         queryset = BusLine.objects.all()
         resource_name = 'busline'
         filtering = {
-            'line_number': ('contains'),
+            'line_number': ('contains', 'exact'),
             'description': ('contains')
         }
